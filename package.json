@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ledevduck/node-pokemon-api/issues"
   },
-  "homepage": "https://github.com/ledevduck/node-pokemon-api#readme"
+  "homepage": "https://github.com/ledevduck/node-pokemon-api#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
