@@ -15,7 +15,8 @@ app.get('/api/pokemons/:id', (req,res) => {
 })
 
 app.get('/api/pokemons', (req,res) => {
-    res.send(`Il y a ${pokemons.length} pokémons`)
+    const message = 'Liste de pokémons récuperée'
+    res.json(success(message, pokemons))
 })
 
 app.listen(port, () => console.log(`App started on: http://localhost:${port}`))
