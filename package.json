@@ -4,7 +4,7 @@
   "description": "creating rest API with nodejs tutorial youtube video by Simon Dieny",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
