@@ -1,13 +1,15 @@
-// get express
 const express = require('express')
 
-// express application instance, web server hosting rest API
 const app = express()
-// rest API will start on this port
 const port = 3000
 
 // first endpoint
+// method get(firstArg, secondArg)
+// firstArg: rest API default route (empty url)
+// secondArg: function(req,res), returns response to client when calling endpoint
+// req: entry endpoint request object
+// res: response object returning from express to client
+// send method from response object to return 'Hello' message to client
 app.get('/', (req,res) => res.send('Hello'))
 
-// start rest API on port, and display message in console with listen method from express
 app.listen(port, () => console.log(`App started on: http://localhost:${port}`))
