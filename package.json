@@ -1,0 +1,19 @@
+{
+  "name": "node-pokemon-api",
+  "version": "1.0.0",
+  "description": "creating rest API with nodejs tutorial youtube video by Simon Dieny",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ledevduck/node-pokemon-api.git"
+  },
+  "author": "ledevduck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ledevduck/node-pokemon-api/issues"
+  },
+  "homepage": "https://github.com/ledevduck/node-pokemon-api#readme"
+}
