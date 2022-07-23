@@ -25,7 +25,7 @@ app.get("/api/pokemons/:id", (req, res) => {
   res.json(success(message, pokemon))
 });
 
-app.post('/api/pokemon', (req, res) => {
+app.post('/api/pokemons', (req, res) => {
   const id = getUniqueId(pokemons)
   const pokemonCreated = { ...req.body, ...{id: id, created: new Date()}}
   pokemons.push(pokemonCreated)
