@@ -32,8 +32,18 @@ app.post('/api/pokemons', (req, res) => {
   // Pb body string, not JSON
   const pokemonCreated = { ...req.body, ...{id: id, created: new Date()}}
   pokemons.push(pokemonCreated)
-  const message = `Le pokemon ${pokemonCreated.name} a bien été créé.`
+  const message = `Le pokemon ${pokemonCreated.name} a bien été créé`
   res.json(success(message, pokemonCreated))
+})
+
+app.put('/api/pokemons/:id', (req, res) => {
+  const id = parseInt(req.params.id)
+  const pokemonUpdated = { ...req.body, id: id }
+  pokemons = pokemons.map(pokemon => {
+    return pokemon.id === id ? pokemonUpdated : pokemon
+  })
+  const message = `Le pokemon ${pokemonUpdated} a bien été modifié`
+  res.json(success(message, pokemonUpdated))
 })
 
 app.listen(port, () => console.log(`App started on: http://localhost:${port}`))
