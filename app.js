@@ -27,6 +27,7 @@ app.get("/api/pokemons/:id", (req, res) => {
 
 app.post('/api/pokemons', (req, res) => {
   const id = getUniqueId(pokemons)
+  // Pb body string, not JSON
   const pokemonCreated = { ...req.body, ...{id: id, created: new Date()}}
   pokemons.push(pokemonCreated)
   const message = `Le pokemon ${pokemonCreated.name} a bien été créé.`
